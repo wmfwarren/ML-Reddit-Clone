@@ -1,0 +1,19 @@
+extends partials/layout.pug
+
+block content
+  .heading
+    h1 New Stuff
+  .order-form
+    form(method='POST')
+      .form-group
+        label(for='title') Title
+        input.form-control#title(type='text' name='title' placeholder='Young Yeezy')
+      .form-group
+        label(for='imgurl') Image URL
+        input.form-control#imgurl(type='text' name='imgurl' placeholder='kwest.com/kissing')
+      .form-group
+        label(for='username') Your Username
+        input.form-control#username(type='tel' name='username' placeholder='Totally not Kanye')
+      .order-form__submit
+        a.btn.btn-danger.btn-lg(href='/') Cancel
+        input.btn.btn-success.btn-lg(type='submit' value='Submit')
