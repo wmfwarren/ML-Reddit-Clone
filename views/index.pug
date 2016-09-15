@@ -7,11 +7,9 @@ block content
     each post in posts
       .postBlock
         h1 #{post.title}
-        img(src=post.imgurl)
+        img.mainPageImgs(src=post.imgurl)
         p By: #{post.username}
-        .up
-          button Up
-        .votes
-          p #{post.votes}
-        .down
-          button Down
+        form(action=`/${post._id}/up` method="POST")
+            input(type="submit" value="up")
+        form(action=`/${post._id}/down` method="POST")
+            input(type="submit" value="down")
