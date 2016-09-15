@@ -1,0 +1,21 @@
+{
+  "name": "mlredditclone",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Marshall Friskics-Warren <wmfwarren@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/wmfwarren/ML-Reddit-Clone",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
