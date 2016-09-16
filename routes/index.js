@@ -27,8 +27,8 @@ router.post("/new", (req, res, err) => {
 });
 
 router.get('/comments/:postId', (req, res) => {
-  let postId = req.params.id;
-  Comment.find() //.findById(postId)
+  let postId = req.params.postId;
+  Comment.find({postId}) //.findById(postId)
     .then((comments) => {
       res.render("comments", {comments})
     })
@@ -37,7 +37,7 @@ router.get('/comments/:postId', (req, res) => {
 
 router.post('/comments/:postId', (req, res, err) => {
   let thisComment = req.body;
-  thisComment.postId = req.params.id;
+  thisComment.postId = req.params.postId;
   Comment
     .create(thisComment)
     .then(() => res.redirect('/'))
