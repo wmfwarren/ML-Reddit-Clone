@@ -1,0 +1,16 @@
+extends partials/layout.pug
+
+block content
+  each comment in comments
+    h4 #{comment.username}
+    p #{comment.message}
+  form(method='POST')
+      .form-group
+        label(for='username') Your Username
+        input.form-control#username(type='tel' name='username' placeholder='Totally not Kanye')
+      .form-group
+        label(for='message') Message
+        input.form-control#message(type='text' name='message' placeholder='This is the Best Meme')
+      .order-form__submit
+        a.btn.btn-danger.btn-lg(href='/') Cancel
+        input.btn.btn-success.btn-lg(type='submit' value='Submit')

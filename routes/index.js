@@ -5,6 +5,7 @@ const { Router } = require("express");
 const router = Router();
 //models
 const Post = require("../models/post.js")
+const Comment = require("../models/comment.js")
 
 router.get('/', (req, res) => {
   Post.find().sort({votes: -1})
@@ -24,6 +25,24 @@ router.post("/new", (req, res, err) => {
     .then(() => res.redirect('/'))
     .catch(err);
 });
+
+router.get('/comments/:postId', (req, res) => {
+  let postId = req.params.id;
+  Comment.find() //.findById(postId)
+    .then((comments) => {
+      res.render("comments", {comments})
+    })
+    .catch(console.error)
+})
+
+router.post('/comments/:postId', (req, res, err) => {
+  let thisComment = req.body;
+  thisComment.postId = req.params.id;
+  Comment
+    .create(thisComment)
+    .then(() => res.redirect('/'))
+    .catch(err)
+})
 
 router.post("/:id/up", (req, res) => {
   let postID = req.params.id;
