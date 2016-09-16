@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-   "engines": {
+  "engines": {
     "node": "6"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
     "express": "^4.14.0",
     "jquery": "^3.1.0",
     "mongoose": "^4.6.0",
@@ -30,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/wmfwarren/ML-Reddit-Clone/issues"
   },
-  "homepage": "https://github.com/wmfwarren/ML-Reddit-Clone#readme"  
+  "homepage": "https://github.com/wmfwarren/ML-Reddit-Clone#readme"
 }
