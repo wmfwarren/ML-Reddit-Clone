@@ -40,7 +40,7 @@ app.use((
     const statusMessage = res.statusMessage
 
     console.error(
-      `[${timeStamp}] "${`${method} ${url}`}" Error (${statusCode}): "${statusMessage}"`
+      `[${timeStamp}] "${method} ${url}" Error (${statusCode}): "${statusMessage}"`
     )
     console.error(err.stack)
   }
