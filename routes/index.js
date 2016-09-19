@@ -61,7 +61,7 @@ router.post("/:id/down", (req, res) => {
   Post.findById(postID, (err, docs) => {
     docs.votes--;
     docs.save((err) => {
-    if(err) {
+      if(err) {
         console.log(err)
       }
       res.redirect("/")
