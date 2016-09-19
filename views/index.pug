@@ -14,3 +14,5 @@ block content
         p #{post.votes}
         form(action=`/${post._id}/down` method="POST")
             input(type="submit" value="down")
+        p 
+          a(href=`/comments/${post._id}`) Comments

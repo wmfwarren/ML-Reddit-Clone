@@ -2,7 +2,21 @@
   "name": "mlredditclone",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "6"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "mongoose": "^4.6.0",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -17,15 +31,5 @@
   "bugs": {
     "url": "https://github.com/wmfwarren/ML-Reddit-Clone/issues"
   },
-  "homepage": "https://github.com/wmfwarren/ML-Reddit-Clone#readme",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "jquery": "^3.1.0",
-    "mongoose": "^4.6.0",
-    "pug": "^2.0.0-beta6"
-  },
-  "devDependencies": {
-    "bower": "^1.7.9"
-  }
+  "homepage": "https://github.com/wmfwarren/ML-Reddit-Clone#readme"
 }
